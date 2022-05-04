@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/tutorial.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Video Gallery</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="videos">
+            <video class="active" src="../videos/disco.mp4" muted controls autoplay ></video>
+            <video src="../videos/Techvid.mp4" muted controls autoplay></video>
+            <video src="../videos/aday.mp4" muted controls autoplay></video>
+            <video src="../videos/ECG.mp4" muted controls autoplay></video>
+        
+        </div>
+        <div class="main-video">
+            <video src="../videos/intro.mp4" muted controls autoplay></video>
+        </div>
+    </div>
+
+    <!-- jquery cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+            $('.videos video').click(function(){
+
+                $(this).addClass('active').siblings().removeClass('active');
+
+                var src = $(this).attr('src');
+                $('.main-video video').attr('src',src);
+            });
+        });
+
+    </script>
+
+<div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus'></i>
+      <span class="logo_name">FS HUB</span>
+    </div>
+      <div>
+          <ul class="nav-links">
+            <li>
+              <a href="index.html">
+                <i class='bx bx-heart' ></i>
+                <span class="links_name">Home</span>
+              </a>
+            </li>
+        <li>
+          <a href="#" class="active">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">Tutorials</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-box' ></i>
+            <span class="links_name">Updates</span>
+          </a>
+        </li>
+        <li>
+          <a  href="ED.html">
+            <i class='bx bx-list-ul' ></i>
+            <span class="links_name">Engineering Drawing</span>
+          </a>
+        </li>
+        <li>
+          <a href="fiction.html">
+            <i class='bx bx-coin-stack' ></i>
+            <span class="links_name">Science fictions</span>
+          </a>
+        </li>
+        <li>
+          <a href="Login.html">
+            <i class='bx bx-book-alt' ></i>
+            <span class="links_name">Past Questions</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-heart' ></i>
+            <span class="links_name">Favourites</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-cog' ></i>
+            <span class="links_name">Setting</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="#">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+
+
+</body>
+</html>

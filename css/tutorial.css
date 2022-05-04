@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: cornflowerblue;
+}
+.sidebar{
+    position: relative;
+    height: 100%;
+    width: 240px;
+    background: #07080a;
+    transition: all 0.5s ease;
+  }
+  .sidebar.active{
+    width: 60px;
+  }
+  .sidebar .logo-details{
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
+  .sidebar .logo-details i{
+    font-size: 28px;
+    font-weight: 500;
+    color: #fff;
+    min-width: 60px;
+    text-align: center
+  }
+  .sidebar .logo-details .logo_name{
+    color: rgb(250, 173, 58);
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .sidebar .nav-links{
+    margin-top: 10px;
+  }
+  .sidebar .nav-links li{
+    position: relative;
+    list-style: none;
+    height: 50px;
+  }
+  .sidebar .nav-links li a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+  }
+  .sidebar .nav-links li a.active{
+    background: #081D45;
+  }
+  .sidebar .nav-links li a:hover{
+    background: #081D45;
+  }
+  .sidebar .nav-links li i{
+    min-width: 60px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+  }
+  .sidebar .nav-links li a .links_name{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+  .sidebar .nav-links .log_out{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+ 
+.container{
+    height: 100vh;
+    display: flex;   
+    background: rgb(28, 8, 66);
+
+
+}
+
+.container .videos{
+    width: 20%;
+    padding: 10px 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container .videos video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.container .videos video:nth-child(1){
+    margin-top: 0;
+}
+
+.container .videos video:hover,
+.container .videos .active{
+    transform: scale(1.06);
+    border: 3px solid blue;
+}
+
+.container .main-video{
+    width:80%;
+    padding: 10px;
+}
+
+.container .main-video video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 3px solid blue;
+}
