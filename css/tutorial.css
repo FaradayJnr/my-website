@@ -90,8 +90,9 @@ body{
 }
 
 .container .videos{
-    width: 20%;
-    padding: 10px 0 10px 10px;
+    width: 15%;
+    padding: 10px 10px 10px 10px;
+    margin: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -106,7 +107,7 @@ body{
 }
 
 .container .videos video:nth-child(1){
-    margin-top: 0;
+    margin-top: 10px;
 }
 
 .container .videos video:hover,
@@ -116,7 +117,7 @@ body{
 }
 
 .container .main-video{
-    width:80%;
+    width:60%;
     padding: 10px;
 }
 
